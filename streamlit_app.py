@@ -18,10 +18,6 @@ import json
 from PIL import Image
 from datetime import datetime
 
-'''json_file_path = 'pollabd-fb6841ee6be0.json'
-
-with open(json_file_path, 'r') as file:
-    data = json.load(file)'''
 
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
 
