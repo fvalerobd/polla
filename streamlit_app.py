@@ -18,24 +18,24 @@ import json
 from PIL import Image
 from datetime import datetime
 
-json_file_path = 'pollabd-fb6841ee6be0.json'
+'''json_file_path = 'pollabd-fb6841ee6be0.json'
 
 with open(json_file_path, 'r') as file:
-    data = json.load(file)
+    data = json.load(file)'''
 
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
 
 KEY ={
     "type": "service_account",
-    "project_id": data["project_id"],
-    "private_key_id": data["private_key_id"],
-    "private_key": data["private_key"],
-    "client_email": data["client_email"],
-    "client_id": data["client_id"],
+    "project_id": st.secrets["project_id"],
+    "private_key_id": st.secrets["private_key_id"],
+    "private_key": st.secrets["private_key"],
+    "client_email": st.secrets["client_email"],
+    "client_id": st.secrets["client_id"],
     "auth_uri": "https://accounts.google.com/o/oauth2/auth",
     "token_uri": "https://accounts.google.com/o/oauth2/token",
     "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-    "client_x509_cert_url": data["client_x509_cert_url"],
+    "client_x509_cert_url": st.secrets["client_x509_cert_url"],
     "universe_domain": "googleapis.com"
 }
 
