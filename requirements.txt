@@ -1,3 +1,7 @@
 altair
+numpy
 pandas
+pydeck
 streamlit
+google-api-python-client
+plotly
