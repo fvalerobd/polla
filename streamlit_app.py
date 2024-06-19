@@ -315,7 +315,12 @@ with tab1:
         nombres_index=maxrow
 
     #st.write(nombres_index)
-    password_check=df[df["Password"]==password].index[0]
+
+
+    try:
+        password_check=df[df["Password"]==password].index[0]
+    except:
+        password_check=nombres_index
 
     if nombres_index<maxrow:
         if password_check==nombres_index:
